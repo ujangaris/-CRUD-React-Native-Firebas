@@ -1,7 +1,7 @@
 // rnfe
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Home from '../pages/Home';
+import {Home, TambahKontak} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +12,10 @@ const Router = () => {
         name="Home"
         component={Home}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="TambahKontak"
+        component={TambahKontak}
       />
     </Stack.Navigator>
   );

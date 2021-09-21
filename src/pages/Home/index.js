@@ -10,7 +10,9 @@ export default class Home extends Component {
       <View style={styles.page}>
         <Text> Halaman Home </Text>
         <View style={styles.wrapperButton}>
-          <TouchableOpacity style={styles.btnTambah}>
+          <TouchableOpacity
+            style={styles.btnTambah}
+            onPress={() => this.props.navigation.navigate('TambahKontak')}>
             <FontAwesomeIcon icon={faPlus} size={20} color={'white'} />
           </TouchableOpacity>
         </View>
