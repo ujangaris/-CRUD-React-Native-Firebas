@@ -19,3 +19,12 @@
             $ npm i --save @fortawesome/react-native-fontawesome
 3. Firebase
     - npm install firebase
+4. Buat kerangka foler :
+    src 
+        -> components
+        -> config
+        -> pages
+        -> router
+        -> app.js
+- setup app.js
+    snipet => rnfe
