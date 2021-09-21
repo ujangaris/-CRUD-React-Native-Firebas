@@ -8,4 +8,12 @@
     Installing the native stack navigator library
         https://reactnavigation.org/docs/5.x/hello-react-navigation
         - npm install @react-navigation/stack@^5.x
-        
+2. React Native Fontawesome
+    - pilih API docs
+        https://www.npmjs.com/package/@fortawesome/react-native-fontawesome
+
+        Install satu2 : 
+            $ npm i --save react-native-svg # **
+            $ npm i --save @fortawesome/fontawesome-svg-core
+            $ npm i --save @fortawesome/free-solid-svg-icons
+            $ npm i --save @fortawesome/react-native-fontawesome
