@@ -1,0 +1,11 @@
+1. React Navigation
+    Install the required packages in your React Native project:
+        https://reactnavigation.org/docs/5.x/getting-started
+        - npm install @react-navigation/native@^5.x
+    Installing dependencies into a bare React Native project
+        - npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+1.1 Helo React Navigation
+    Installing the native stack navigator library
+        https://reactnavigation.org/docs/5.x/hello-react-navigation
+        - npm install @react-navigation/stack@^5.x
+        
