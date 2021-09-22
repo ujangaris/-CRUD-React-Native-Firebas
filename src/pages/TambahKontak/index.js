@@ -8,6 +8,11 @@ export default class TambahKontak extends Component {
     return (
       <View style={styles.pages}>
         <InputData label="Nama :" placeholder="Masukan Nama" />
+        <InputData
+          label="No. HP :"
+          placeholder="Masukan No. HP"
+          keyboardType="number-pad"
+        />
       </View>
     );
   }
