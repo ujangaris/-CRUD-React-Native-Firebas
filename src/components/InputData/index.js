@@ -2,7 +2,21 @@
 import React from 'react';
 import {StyleSheet, Text, TextInput} from 'react-native';
 
-const InputData = ({label, placeholder, keyboardType}) => {
+const InputData = ({label, placeholder, keyboardType, isTextArea}) => {
+  if (isTextArea) {
+    return (
+      <>
+        <Text style={styles.label}> {label} </Text>
+        <TextInput
+          multiline={true}
+          numberOfLines={4}
+          placeholder={placeholder}
+          style={styles.textInputArea}
+          keyboardType={keyboardType}
+        />
+      </>
+    );
+  }
   return (
     <>
       <Text style={styles.label}> {label} </Text>
@@ -23,6 +37,14 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   textInput: {
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+  },
+  textInputArea: {
+    textAlignVertical: 'top',
     borderWidth: 1,
     borderColor: 'gray',
     borderRadius: 5,

@@ -13,6 +13,11 @@ export default class TambahKontak extends Component {
           placeholder="Masukan No. HP"
           keyboardType="number-pad"
         />
+        <InputData
+          label="Alamat :"
+          placeholder="Masukan Alamat"
+          isTextArea={true}
+        />
       </View>
     );
   }
