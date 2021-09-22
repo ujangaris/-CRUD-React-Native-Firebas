@@ -1,7 +1,7 @@
 //rnfes
 import React from 'react';
 import {StyleSheet, Text, TextInput} from 'react-native';
-
+//reusable component/ component yang bisa dipakai berkali2
 const InputData = ({label, placeholder, keyboardType, isTextArea}) => {
   if (isTextArea) {
     return (
