@@ -2,7 +2,15 @@
 import React from 'react';
 import {StyleSheet, Text, TextInput} from 'react-native';
 //reusable component/ component yang bisa dipakai berkali2
-const InputData = ({label, placeholder, keyboardType, isTextArea}) => {
+const InputData = ({
+  label,
+  placeholder,
+  keyboardType,
+  isTextArea,
+  onChangeText,
+  namaState,
+  value,
+}) => {
   if (isTextArea) {
     return (
       <>
@@ -13,6 +21,8 @@ const InputData = ({label, placeholder, keyboardType, isTextArea}) => {
           placeholder={placeholder}
           style={styles.textInputArea}
           keyboardType={keyboardType}
+          value={value}
+          onChangeText={text => onChangeText(namaState, text)}
         />
       </>
     );
@@ -24,6 +34,8 @@ const InputData = ({label, placeholder, keyboardType, isTextArea}) => {
         placeholder={placeholder}
         style={styles.textInput}
         keyboardType={keyboardType}
+        value={value}
+        onChangeText={text => onChangeText(namaState, text)}
       />
     </>
   );
