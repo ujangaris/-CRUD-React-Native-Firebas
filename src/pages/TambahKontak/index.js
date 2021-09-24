@@ -1,6 +1,6 @@
 //rncs
 import React, {Component} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View, Alert} from 'react-native';
 import {InputData} from '../../components';
 
 export default class TambahKontak extends Component {
@@ -21,8 +21,13 @@ export default class TambahKontak extends Component {
   };
 
   onSubmit = () => {
-    console.log('Masuk Submit');
-    console.log(this.state);
+    if(this.state.nama && this.state.nomorHP && this.state.alamat){
+      console.log('Masuk Submit');
+      console.log(this.state);
+
+    }else{
+      Alert.alert("error", "Nama, Nomor Hp dan Alamat Wajib di isi!")
+    }
   };
 
   render() {
