@@ -1,13 +1,13 @@
 import firebase from 'firebase';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCseMI86YRkcsaA545gSOCgKal-OHDJSZs",
-  authDomain: "crud-react-native-30da9.firebaseapp.com",
-  databaseURL: "https://crud-react-native-30da9-default-rtdb.firebaseio.com",
-  projectId: "crud-react-native-30da9",
-  storageBucket: "crud-react-native-30da9.appspot.com",
-  messagingSenderId: "1059888046623",
-  appId: "1:1059888046623:web:7a0c73a870472f00cd2b2a"
+  apiKey: 'AIzaSyBl7m4-p0fN0qYvPVg_rrFvriTgahF2wAg',
+  authDomain: 'crud-react-native-28bec.firebaseapp.com',
+  databaseURL: 'https://crud-react-native-28bec-default-rtdb.firebaseio.com',
+  projectId: 'crud-react-native-28bec',
+  storageBucket: 'crud-react-native-28bec.appspot.com',
+  messagingSenderId: '1053638180382',
+  appId: '1:1053638180382:web:06ad6b693a8d9bc1a2f80f',
 });
 
 const FIREBASE = firebase;
