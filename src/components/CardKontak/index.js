@@ -1,15 +1,26 @@
 // rnfes
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-const CardKontak = ({key, kontakItem}) => {
+const CardKontak = ({id, kontakItem}) => {
   return (
-    <View>
-      <Text key={key}>{kontakItem.nama}</Text>
-    </View>
+    <TouchableOpacity style={styles.container}>
+      <View>
+        <Text style={styles.nama}>{kontakItem.nama}</Text>
+        <Text style={styles.noHp}>No. Hp : {kontakItem.nomor}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
 export default CardKontak;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 5,
+    marginBottom: 20,
+  },
+});
