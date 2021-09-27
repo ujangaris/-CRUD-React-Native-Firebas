@@ -32,4 +32,12 @@ const styles = StyleSheet.create({
 
     elevation: 5,
   },
+  nama: {
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  noHp: {
+    fontSize: 12,
+    color: 'gray',
+  },
 });
