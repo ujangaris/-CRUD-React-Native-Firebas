@@ -4,6 +4,7 @@ import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import FIREBASE from '../../config/FIREBASE';
+import CardKontak from '../../components/CardKontak';
 
 export default class Home extends Component {
   constructor(props) {
@@ -42,7 +43,9 @@ export default class Home extends Component {
 
         <View style={styles.listKontak}>
           {kontaksKey.length > 0 ? (
-            kontaksKey.map(key => <Text key={key}>{kontaks[key].nama}</Text>)
+            kontaksKey.map(key => (
+              <CardKontak key={key} kontakItem={kontaks[key]} id={key} />
+            ))
           ) : (
             <Text>Daftar Kosong</Text>
           )}
