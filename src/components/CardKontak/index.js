@@ -1,4 +1,6 @@
 // rnfes
+import {faEdit, faTimes} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
@@ -7,7 +9,11 @@ const CardKontak = ({id, kontakItem}) => {
     <TouchableOpacity style={styles.container}>
       <View>
         <Text style={styles.nama}>{kontakItem.nama}</Text>
-        <Text style={styles.noHp}>No. Hp : {kontakItem.nomor}</Text>
+        <Text style={styles.noHp}>No. Hp : {kontakItem.nomorHP}</Text>
+      </View>
+      <View style={styles.icon}>
+        <FontAwesomeIcon icon={faEdit} color={'orange'} size={25} />
+        <FontAwesomeIcon icon={faTimes} color={'red'} size={25} />
       </View>
     </TouchableOpacity>
   );
@@ -39,5 +45,11 @@ const styles = StyleSheet.create({
   noHp: {
     fontSize: 12,
     color: 'gray',
+  },
+  icon: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
 });
