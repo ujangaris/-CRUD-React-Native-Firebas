@@ -17,6 +17,10 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
+    this.ambilData();
+  }
+
+  ambilData = () => {
     FIREBASE.database()
       .ref('Kontak')
       .once('value', quertSnapShot => {
@@ -28,7 +32,7 @@ export default class Home extends Component {
           kontaksKey: Object.keys(kontakItem),
         });
       });
-  }
+  };
 
   removeData = id => {
     Alert.alert(
@@ -40,7 +44,16 @@ export default class Home extends Component {
           onPress: () => console.log('Cancel Pressed'),
           style: 'cancel',
         },
-        {text: 'OK', onPress: () => console.log('OK Pressed :', id)},
+        {
+          text: 'OK',
+          onPress: () => {
+            FIREBASE.database()
+              .ref('Kontak/' + id)
+              .remove();
+            this.ambilData();
+            Alert.alert('Hapus', 'Sukses Hapus Data');
+          },
+        },
       ],
       {cancelable: false},
     );
