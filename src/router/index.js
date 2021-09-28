@@ -13,9 +13,21 @@ const Router = () => {
         component={Home}
         options={{headerShown: false}}
       />
-      <Stack.Screen name="TambahKontak" component={TambahKontak} />
-      <Stack.Screen name="DetailKontak" component={DetailKontak} />
-      <Stack.Screen name="EditKontak" component={EditKontak} />
+      <Stack.Screen
+        name="TambahKontak"
+        component={TambahKontak}
+        options={{title: 'Tambah Kontak'}}
+      />
+      <Stack.Screen
+        name="DetailKontak"
+        component={DetailKontak}
+        options={{title: 'Detail Kontak'}}
+      />
+      <Stack.Screen
+        name="EditKontak"
+        component={EditKontak}
+        options={{title: 'Edit Kontak'}}
+      />
     </Stack.Navigator>
   );
 };
