@@ -32,3 +32,6 @@
 7. gunakan firebase versi 8  karna versi 9 masih beta jd downgrate versi firebasenya:
     - untuk downgrate : npm install firebase@^8.x.x
     - untuk hapus versi 9xx : npm uninstall firebase@^9.x.x
+
+11. Alert react native: 
+    https://reactnative.dev/docs/0.63/alert

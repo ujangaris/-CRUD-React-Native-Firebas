@@ -1,6 +1,6 @@
 //rncs
 import React, {Component} from 'react';
-import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {Text, StyleSheet, View, TouchableOpacity, Alert} from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import FIREBASE from '../../config/FIREBASE';
@@ -30,6 +30,22 @@ export default class Home extends Component {
       });
   }
 
+  removeData = id => {
+    Alert.alert(
+      'Info',
+      'Anda yakin akan menghapus Data Kontak ?',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {text: 'OK', onPress: () => console.log('OK Pressed :', id)},
+      ],
+      {cancelable: false},
+    );
+  };
+
   render() {
     // console.log("Kontkas : ", this.state.kontaks);
     // console.log("Kontkas Key: ", this.state.kontaksKey);
@@ -49,6 +65,7 @@ export default class Home extends Component {
                 kontakItem={kontaks[key]}
                 id={key}
                 {...this.props}
+                removeData={this.removeData}
               />
             ))
           ) : (
